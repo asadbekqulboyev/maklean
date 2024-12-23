@@ -1,0 +1,58 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+// scss files
+@import 'header';
+
+body {
+    background: #F4F6FB;
+    color: #131B23;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1160px;
+}
+// flex
+.flex {
+    display: flex;
+
+    &.start {
+        justify-content: flex-start;
+    }
+
+    &.center {
+        justify-content: center;
+    }
+
+    &.between {
+        justify-content: space-between;
+    }
+
+    &.end {
+        justify-content: flex-end;
+    }
+
+    &.a_start {
+        align-items: flex-start;
+    }
+
+    &.a_center {
+        align-items: center;
+    }
+
+    &.a_end {
+        align-items: flex-end;
+    }
+    &.column{
+        flex-direction: column;
+    }
+    &.row{
+        flex-direction: row;
+    }
+    &.wrap{
+        flex-wrap: wrap;
+    }
+}
