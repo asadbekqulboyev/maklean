@@ -1,3 +1,40 @@
-.header{
-    background: #313940;
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 55px;
+    z-index:10;
+
+    a {
+        color: #F4F6FB;
+    }
+
+    &_left {
+        gap: 82px;
+    }
+
+    &_menu_lists {
+        gap: 35px;
+    }
+
+    &_contacts {
+        .phone {
+            font-weight: 600;
+        }
+
+        .month_time {
+            color: #F4F6FB;
+            font-family: Manrope;
+            font-size: 12.695px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .social_lists {
+            margin-top: 7px;
+            gap: 18px;
+        }
+    }
 }

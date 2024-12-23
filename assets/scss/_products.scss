@@ -1,0 +1,30 @@
+.products{
+    padding-top: 150px;
+    padding-bottom: 105px;
+    background: #FFF;
+    &_top{
+        .slide_btn_lists{
+            gap: 18px;
+        }
+    }
+    &_slide{
+        padding-top: 137px;
+        .slide_item{
+            img{
+                margin: 0 auto;
+                height: 263px;
+            }
+            .slide_info{
+                margin-top: 15px;
+                .slide_description{
+                    color: #131B23;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+            
+        }
+    }
+}

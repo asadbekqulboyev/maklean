@@ -1,0 +1,90 @@
+.partners {
+    padding-top: 150px;
+
+    &_company {
+        padding-top: 17px;
+        width: 500px;
+        flex: 0 0 auto;
+        justify-content: space-between;
+        gap: 40px;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 99%;
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            height: 1px;
+            background: #DADCE1;
+        }
+
+    }
+
+    &_items {
+        margin-top: 54px;
+    }
+
+    &_item {
+        width: 20%;
+        position: relative;
+        transition: all .2s linear;
+        color: #131B23;
+        cursor: pointer;
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 387px;
+        }
+
+        .partners_bg {
+            background: #ffffffba;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            transition: all .2s linear;
+        }
+
+        .partners_info {
+            padding: 30px;
+            height: 100%;
+            justify-content: flex-end;
+            .partners_title {
+                color: inherit;
+                font-size: 13px;
+                font-weight: 400;
+            }
+
+            .parners_sum {
+                color: inherit;
+                font-family: Montserrat;
+                font-size: 63px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        &:hover {
+            width: 33%;
+            color: #F4F6FB;
+
+            .partners_bg {
+                background: #007afc9c;
+            }
+
+            .partners_info {
+                height: 100%;
+                justify-content: space-between;
+
+            }
+        }
+    }
+}
