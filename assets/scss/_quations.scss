@@ -1,0 +1,167 @@
+.quations {
+    background: #007BFB;
+
+    .desctop_container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-left: 135px;
+        gap: 0 25px;
+        @media (max-width:1440px) {
+            padding-left: 15px;
+        }
+    }
+
+    &_left {
+        width: 52%;
+        width: 525px;
+        .section_title {
+            color: #F4F6FB;
+        }
+
+        .quation_items {
+            height: 356px;
+            overflow-y: auto;
+            margin-top: 65px;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+                background: #D9D9D9;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                width: 100%;
+                background: #00519E;
+            }
+
+            .quation_item {
+                height: 86px;
+                align-items: center;
+                background: #007BFB;
+                border-bottom: 0.89px solid #92C5FB;
+                border-left: 0.89px solid #92C5FB;
+                border-right: 0.89px solid #92C5FB;
+                padding: 0 35px;
+                color: #F4F6FB;
+                cursor: pointer;
+                &:nth-child(1) {
+                    border-top: 0.89px solid #92C5FB;
+                }
+
+                .quation_item_left {
+                    gap: 18px;
+                    .quation_item_title {
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    span {
+                        color: #92C5FB;
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+
+
+                &:hover {
+                    border: 0.89px solid #92C5FB;
+                    background: #F4F6FB;
+                    color: #131B23;
+
+                    .quation_icon {
+                        background: #007BFB;
+
+                        path,
+                        line {
+                            stroke: #fff;
+                        }
+                    }
+
+                    span {
+                        color: #131B23;
+                    }
+                }
+                &.active {
+                    border: 0.89px solid #92C5FB;
+                    background: #F4F6FB;
+                    color: #131B23;
+
+                    .quation_icon {
+                        background: #007BFB;
+
+                        path,
+                        line {
+                            stroke: #fff;
+                        }
+                    }
+
+                    span {
+                        color: #131B23;
+                    }
+                }
+
+                .quation_icon {
+                    width: 22px;
+                    height: 22px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    background: #FFF;
+                    flex: 0 0 auto;
+                }
+            }
+        }
+    }
+
+    &_right {
+        width: 48%;
+        background: #fff;
+
+        .quation_request {
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .quation_info {
+            padding: 59px 42px;
+
+            .quation_info_title {
+                gap: 16px;
+                color: #131B23;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 109.4%;
+                letter-spacing: -0.195px;
+
+                .number {
+                    font-weight: 600;
+                    color: rgba(0, 123, 251, 0.60);
+                }
+            }
+
+            .quation_description_lists {
+                color: #131B23;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-top: 22px;
+                padding-left: 20px;
+                li{
+                    list-style:inside;
+                    &:nth-child(5){
+                        margin-top: 14px;
+                    }
+                }
+            }
+        }
+
+    }
+}

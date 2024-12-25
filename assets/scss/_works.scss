@@ -1,24 +1,42 @@
 .works {
     padding: 150px 0;
-
+    @media (max-width:992px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
     &_items {
         gap: 30px 0;
         margin-top: 105px;
+        @media (max-width:1159px) {
+            gap: 20px 0;
+        }
+        @media (max-width:992px) {
+            margin-top: 65px;
+        }
         li {
             width: calc(33% - 27.5px);
-            &:last-child{
+            @media (max-width:1159px) {
+                width: calc(33% - 10px); 
+            }
+            &:last-child {
                 background: transparent;
                 display: flex;
                 align-items: flex-end;
-                a{
+
+                a {
                     background-color: transparent;
                     font-size: 15px;
                     padding-right: 0;
                     justify-content: flex-end;
-                padding-left: 85px;
-
+                    padding-left: 85px;
+                    @media (max-width:992px) {
+                        padding: 10px 15px;
+                        border-radius: 38px;
+                        min-height: 74px;
+                    }
                 }
             }
+
             a {
                 width: 100%;
                 display: flex;
@@ -26,24 +44,115 @@
                 align-items: center;
                 border-radius: 57px;
                 background: #FFF;
-                padding:13px 35px;
+                padding: 13px 35px;
                 align-items: center;
                 gap: 20px;
                 color: #131B23;
                 transition: all .2s linear;
-                path{
+                span{
+                    @media (max-width:992px) {
+                      font-size: 13px;
+                    }
+                }
+                svg{
+                    @media (max-width:992px) {
+                        width: 35px;
+                    }
+                }
+                path {
                     transition: all .2s linear;
                 }
-            }
-            &:not(:last-child):hover{
-                a{
-               background:#007BFB ;
-                color: #FFF;
-                path{
-                    fill: #fff;
-                }     
+                @media (max-width:1159px) {
+                  gap: 10px;
+                  padding: 10px 30px;
+                  font-size: 16px;
                 }
-                
+                @media (max-width:992px) {
+                    padding: 10px 15px;
+                    border-radius: 38px;
+                    min-height: 74px;
+                }
+            }
+
+            &:not(:last-child):hover {
+                a {
+                    background: #007BFB;
+                    color: #FFF;
+
+                    path {
+                        fill: #fff;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.workflow {
+    padding-top: 150px;
+    padding-bottom: 156px;
+    @media (max-width:992px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .container {
+        position: relative;
+        .workflow_image {
+            position: absolute;
+            right: -408px;
+            top: -108px;
+            @media (max-width:1159px) {
+                right: -60%;
+              }
+        }
+
+    }
+
+    &_items {
+        gap: 45px;
+        margin-top: 105px;
+
+    }
+
+    &_item {
+        gap: 40px;
+
+        .number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            flex: 0 0 auto;
+            background: #007BFB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F4F6FB;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .workflow_description {
+            margin-top: 6px;
+            color: #4E545A;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            a{
+                color: inherit;
+            }
+            span{
+                padding-left: 28px;
+                font-size: 12.695px;
+            }
+            ul{
+                padding-left: 17px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
             }
         }
     }

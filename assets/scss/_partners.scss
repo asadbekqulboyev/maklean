@@ -1,6 +1,8 @@
 .partners {
     padding-top: 150px;
-
+    @media (max-width:992px) {
+    padding-top: 80px;
+    }
     &_company {
         padding-top: 17px;
         width: 500px;
@@ -8,7 +10,14 @@
         justify-content: space-between;
         gap: 40px;
         position: relative;
-
+        @media (max-width:1159px) {
+            gap: 30px;
+            width: 445px;
+        }
+        @media (max-width:992px) {
+            gap: 10px;
+            width: 420px;
+        }
         &::after {
             content: '';
             width: 99%;
@@ -19,6 +28,9 @@
             margin: auto 0;
             height: 1px;
             background: #DADCE1;
+            @media (max-width:1159px) {
+               margin-top: 15%;
+            }
         }
 
     }
@@ -33,49 +45,69 @@
         transition: all .2s linear;
         color: #131B23;
         cursor: pointer;
+        // @media (max-width:992px) {
+        //    width: 33%;
+        // }
         img {
             width: 100%;
             object-fit: cover;
             height: 387px;
+            @media (max-width:992px) {
+               height: 270px;
+             }
         }
 
         .partners_bg {
             background: #ffffffba;
             position: absolute;
             top: 0;
-            height: 100%;
+            height: 99%;
             width: 100%;
             transition: all .2s linear;
+            @media (max-width:992px) {
+                height: 270px;
+              }
         }
 
         .partners_info {
             padding: 30px;
             height: 100%;
             justify-content: flex-end;
+            @media (max-width:992px) {
+                font-size: 24px;
+                padding: 10px;
+             }
             .partners_title {
                 color: inherit;
                 font-size: 13px;
                 font-weight: 400;
+                @media (max-width:992px) {
+                    font-size: 12px;
+                }
             }
 
             .parners_sum {
                 color: inherit;
-                font-family: Montserrat;
                 font-size: 63px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-
+                margin-top: 19px;
+                @media (max-width:1159px) {
+                    font-size: 34px;
+                }
+                @media (max-width:992px) {
+                    font-size: 24px;
+                 }
                 span {
                     font-size: 13px;
                 }
             }
         }
 
-        &:hover {
+        &.active {
             width: 33%;
             color: #F4F6FB;
-
             .partners_bg {
                 background: #007afc9c;
             }
@@ -84,6 +116,23 @@
                 height: 100%;
                 justify-content: space-between;
 
+            }
+            .parners_sum{
+                font-size: 130px;
+                @media (max-width:1159px) {
+                    font-size: 65px;
+                 }
+                @media (max-width:992px) {
+                    font-size: 34px;
+                 }
+            }
+        }
+        &:last-child{
+            .parners_sum span{
+                font-size: 45px;
+                @media (max-width:992px) {
+                    font-size: 24px;
+                 }
             }
         }
     }

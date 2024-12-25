@@ -7,12 +7,18 @@
         position: absolute;
         right: 70%;
         top: -245px;
+        @media (max-width:1159px) {
+            right: 60%;
+        }
     }
     &_info {
         padding-top: 334px;
         color: #F4F6FB;
         position: relative;
         z-index: 12;
+        @media (max-width:992px) {
+           padding-top: 250px;
+        }
         .top_title {
             color: #F4F6FB;
             font-family: Montserrat;
@@ -24,12 +30,16 @@
         }
 
         h1 {
-            text-shadow: 0px 19.567px 5.336px rgba(23, 35, 64, 0.00), 0px 12.452px 5.336px rgba(23, 35, 64, 0.01), 0px 7.115px 4.447px rgba(23, 35, 64, 0.03), 0px 3.558px 3.558px rgba(23, 35, 64, 0.04), 0px 0.889px 1.779px rgba(23, 35, 64, 0.05), 0px 0px 0px rgba(23, 35, 64, 0.05);
+            text-shadow: 0px 19.567px 5.336px rgba(23, 35, 64, 0.00);
             font-size: 77px;
             font-weight: 700;
             line-height: 90.398px;
             letter-spacing: 2.31px;
             margin-top: 18px;
+            @media (max-width:992px) {
+                font-size: 48px;
+                line-height: normal;
+            }
         }
 
         .botom_title {
@@ -38,6 +48,10 @@
             font-weight: 500;
             line-height: 46.36px;
             letter-spacing: 0.4px;
+            @media (max-width:992px) {
+                font-size: 36px;
+                line-height: normal;
+            }
         }
     }
 

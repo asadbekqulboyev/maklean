@@ -3,8 +3,44 @@
     width: 100%;
     top: 0;
     left: 0;
-    padding-top: 55px;
-    z-index:10;
+    padding-top: 45px;
+    padding-bottom: 43px;
+    z-index: 1001;
+    overflow: hidden;
+    transition: all .2s linear;
+    .logo{
+        img{
+        @media (max-width:992px) {
+            width: 170px;
+        }}
+      }
+    @media (max-width:992px) {
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+    &.active {
+        background: #313940;
+        &::after {
+            content: '';
+            width: 30%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            top:0;
+            background: #007BFC;
+            z-index: 1001;
+            clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+            @media (max-width:992px) {
+                width: 32%;
+            }
+        }
+        @media (max-width:768px) {
+            position: absolute;
+            background-color: transparent;
+            top: 0; left: 0;
+        }
+    }
 
     a {
         color: #F4F6FB;
@@ -12,24 +48,41 @@
 
     &_left {
         gap: 82px;
+        position: relative;
+        z-index: 1003;
+        @media (max-width:992px) {
+            gap: 15px;
+        }
     }
 
     &_menu_lists {
         gap: 35px;
+        @media (max-width:992px) {
+            gap: 10px;
+        }
+        @media (max-width:768px) {
+            display: none !important;
+        }
     }
 
     &_contacts {
         .phone {
             font-weight: 600;
+            @media (max-width:992px) {
+             font-size: 16px;
+            }
         }
 
         .month_time {
             color: #F4F6FB;
-            font-family: Manrope;
+            font-family: 'Manrope';
             font-size: 12.695px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            @media (max-width:992px) {
+                font-size: 11px;
+            }
         }
 
         .social_lists {

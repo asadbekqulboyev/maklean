@@ -1,0 +1,115 @@
+.calculate {
+    padding-bottom: 140px;
+    .calculate_content {
+        padding: 66px 72px 80px 60px;
+        border-radius: 57px;
+        background: #FFF;
+        margin-top: 80px;
+        box-shadow:0px 4px 45px rgba(0, 123, 251, 0.06);
+        .form_title {
+            color: #131B23;
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: -0.45px;
+        }
+
+        .form_items {
+            gap: 8px 0;
+            margin-top: 40px;
+
+            .form_item {
+                width: calc(50% - 14px);
+                position: relative;
+
+                input {
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    position: absolute;
+                }
+
+                span.flex {
+                    padding: 18px 18px 19px 20px;
+                    border: 1px solid #007BFB;
+                    opacity: .5;
+                    width: 100%;
+                    gap: 10px;
+                    cursor: pointer;
+                    span {
+                        border: 0;
+                    }
+                }
+
+                input:checked~span {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .form_bottom {
+            margin-top: 170px;
+
+            .progress {
+                .progress_sums {
+                    gap: 14px;
+
+                    span {
+                        color: #131B23;
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+
+                    .progress_number {
+                        color: #007BFB;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 107.4%;
+                        letter-spacing: -0.45px;
+                    }
+                }
+
+                .progressbar {
+                    width: 593px;
+                    height: 10px;
+                    background: #92C5FB;
+                    margin-top: 11px;
+                    position: relative;
+                    @media (max-width:1159px) {
+                        width: 490px;
+                      }
+                    .progres_thumb {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 10%;
+                        background: #007BFB;
+                        transition: all .2s linear;
+                    }
+                }
+                
+            }
+            .btn_lists{
+                gap: 30px;
+                .next_form {
+                    cursor: pointer;
+                    padding: 26px 69px;
+                    color: #F4F6FB;
+                    font-size: 16.606px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    border-radius: 57px;
+                    text-transform: uppercase;
+                    gap: 20px;
+                    background: #007BFB;
+                    outline: 0;
+                    border: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.articles {
+    padding: 150px 0 130px;
+
+    .all_btn {
+        border-radius: 57px;
+        border: 1.038px solid #007BFC;
+        background: #007BFC;
+        color: #FFF;
+        text-align: center;
+        font-size: 16.606px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 26px 50px;
+    }
+
+    &_items {
+        margin-top: 105px;
+    }
+
+    &_item {
+        width: calc(33.33% - 12px);
+        min-height: 339px;
+        background-size: cover !important;
+
+        .articles_top {
+            .articles_number {
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 500;
+            }
+
+            .span {
+                color: #F4F6FB;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 109.4%;
+            }
+        }
+
+        .articles_info {
+            padding: 33px 35px;
+            height: 100%;
+            background: rgba(19, 27, 35, 0.60);
+            color: #F4F6FB;
+
+            .articles_text {
+                .articles_title {
+                    font-weight: 600;
+                }
+
+                .articles_description {
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    margin-top: 4px;
+                }
+
+                .articles_bottom {
+                    margin-top: 15px;
+                    padding-top: 15px;
+                    border-top: 1px solid #F4F6FB99;
+                    gap: 8px;
+                    color: #F4F6FB;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

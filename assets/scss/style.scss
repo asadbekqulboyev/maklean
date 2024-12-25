@@ -7,6 +7,13 @@
 @import 'works';
 @import 'products';
 @import 'deliver';
+@import 'calculate';
+@import 'reviews';
+@import 'articles';
+@import 'quations';
+@import 'forms';
+@import 'footer';
+
 
 * {
     margin: 0;
@@ -38,6 +45,12 @@ li {
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    @media (max-width:1159px) {
+        max-width: 992px;
+    }
+    @media (max-width:992px) {
+        max-width: 768px;
+    }
 }
 .wrappper{
     overflow: hidden;
@@ -98,12 +111,17 @@ li {
 
 .section_title {
     color: #131B23;
-    font-family: Montserrat;
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     letter-spacing: -0.9px;
+    @media (max-width:1159px) {
+        font-size: 48px;
+    }
+    @media (max-width:1159px) {
+        font-size: 36px;
+    }
 }
 .slide_btn{
     width: 60px;

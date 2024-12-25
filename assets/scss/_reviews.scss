@@ -1,0 +1,28 @@
+.reviews{
+    background: #FFF;
+    padding: 105px 0 ;
+    .btn_lists{
+        gap: 18px;
+    }
+    &_content{
+        margin-top: 105px;
+        .reviews_item{
+            padding: 46px 59px;
+            height: 507px;
+            border: 1px solid #E8E9E9;
+            background: #FFF;
+            box-shadow: 0px 4px 20px 0px #007BFBA1;
+            justify-content: space-between;
+            @media (max-width:1159px) {
+                padding: 40px 30px;
+              }
+            .reviews_logo{
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+    

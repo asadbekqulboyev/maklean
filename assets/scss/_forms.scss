@@ -1,0 +1,73 @@
+.forms {
+    background: url('../images/form_bg.png') no-repeat center;
+    background-size: cover;
+    padding: 65px 0;
+    margin-top: 133px;
+
+    .form_title {
+        color: #F4F6FB;
+        font-size: 30px;
+        font-style: normal;
+        line-height: normal;
+        font-weight: 500;
+        width: 40%;
+        flex: 0 0 auto;
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    .form {
+        width: 50%;
+        gap: 33px;
+        &_inputs {
+            gap: 20px;
+        }
+
+        input:not([type=checkbox]) {
+            border-radius: 50px;
+            border: 1px solid #F4F6FB;
+            background: #FFF;
+            outline: none;
+            padding: 12.5px 15px;
+            color: #007BFB;
+            width: 240px;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        button {
+            color: #131B23;
+            font-size: 16.606px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            padding: 27px 31px;
+            border-radius: 57px;
+            border: 1.038px solid #F4F6FB;
+            background: #F4F6FB;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .checked_text {
+            padding-left: 15px;
+            gap: 8px;
+            span{
+                color: #F0F0F0;
+                font-size: 8px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                gap: 8px;
+            }
+        }
+        .form_btns{
+            gap: 13px;
+        }
+    }
+}
