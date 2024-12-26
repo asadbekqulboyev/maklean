@@ -130,7 +130,11 @@
         line-height: normal;
         letter-spacing: -0.33px;
         margin-bottom: 28px;
-        
+        display:none !important;
+        @media screen {
+            display: block !important
+            ;
+        }
     }
     .bottom_mobile{
         display: none;

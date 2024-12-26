@@ -2101,6 +2101,12 @@
   line-height: normal;
   letter-spacing: -0.33px;
   margin-bottom: 28px;
+  display: none !important;
+}
+@media screen {
+  .footer .footer_mobile_title {
+    display: block !important;
+  }
 }
 .footer .bottom_mobile {
   display: none;
