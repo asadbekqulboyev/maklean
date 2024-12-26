@@ -1638,6 +1638,11 @@
 .quations {
   background: #007BFB;
 }
+@media (max-width: 650px) {
+  .quations {
+    padding: 40px 0 128px;
+  }
+}
 .quations .desctop_container {
   max-width: 1440px;
   margin: 0 auto;
@@ -1649,14 +1654,20 @@
     padding-left: 15px;
   }
 }
-@media (max-width: 556px) {
+@media (max-width: 650px) {
   .quations .desctop_container {
-    display: none;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .quations .desctop_container .quations_right {
   width: 48%;
   background: #fff;
+}
+@media (max-width: 650px) {
+  .quations .desctop_container .quations_right {
+    display: none;
+  }
 }
 .quations .desctop_container .quations_right .quation_request img {
   width: 100%;
@@ -1711,6 +1722,11 @@
     width: 50%;
   }
 }
+@media (max-width: 650px) {
+  .quations_left {
+    width: 100%;
+  }
+}
 .quations_left .section_title {
   color: #F4F6FB;
 }
@@ -1718,6 +1734,12 @@
   height: 356px;
   overflow-y: auto;
   margin-top: 65px;
+}
+@media (max-width: 650px) {
+  .quations_left .quation_items {
+    height: auto;
+    margin-top: 40px;
+  }
 }
 .quations_left .quation_items::-webkit-scrollbar {
   width: 6px;
@@ -1806,6 +1828,34 @@
   border-radius: 50%;
   background: #FFF;
   flex: 0 0 auto;
+}
+.quations_left .quation_items .request_mobile {
+  background: #FFF;
+}
+.quations_left .quation_items .request_mobile li {
+  list-style: inside;
+  padding-left: 20px;
+}
+.quations_left .quation_items .request_mobile img {
+  width: 100%;
+}
+.quations_left .quation_items .request_mobile .quation_info {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 26px 30px 20px;
+  color: #131B23;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  gap: 20px;
+}
+.quations_left .quation_items .request_mobile .quation_info .number {
+  color: rgba(0, 123, 251, 0.6);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .quations .mobile_content {
   display: none;
@@ -2103,7 +2153,7 @@
   margin-bottom: 28px;
   display: none !important;
 }
-@media screen {
+@media (max-width: 556px) {
   .footer .footer_mobile_title {
     display: block !important;
   }

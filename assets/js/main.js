@@ -81,22 +81,31 @@ $(document).ready(function () {
     }
   );
   // tabs
-  $('.desctop_container .quation_request').hide();
-  $('.desctop_container .quation_request:first').show();
-  $('.desctop_container .quation_item').click(function () {
-    // Hamma tugmalar va ma'lumotlardan `active` klassini olib tashlash
-    $('.quation_item').removeClass('active');
-    $('.quation_request').fadeOut(0);
-    // Joriy tugmaga `active` klassini qo'shish
-    $(this).addClass('active');
+ 
 
-    // Tegishli ma'lumotni ko'rsatish
-    const target = $(this).data('target');
-    $('.quation_request#request' + target).fadeIn(200);
-    console.log($('.quation_request#request' + target).show());
+  if(innerWidth<650){
 
-  });
+    $('.quation_mobile').click(function(){
+      $(".request_mobile").slideUp()
+      $(this).next(".request_mobile").slideDown()
+    })
+  }else{
+    $('.desctop_container .quation_request').hide();
+    $('.desctop_container .quation_request:first').show();
+    $('.desctop_container .quation_item').click(function () {
+      // Hamma tugmalar va ma'lumotlardan `active` klassini olib tashlash
+      $('.quation_item').removeClass('active');
+      $('.quation_request').fadeOut(0);
+      // Joriy tugmaga `active` klassini qo'shish
+      $(this).addClass('active');
   
+      // Tegishli ma'lumotni ko'rsatish
+      const target = $(this).data('target');
+      $('.quation_request#request' + target).fadeIn(200);
+      console.log($('.quation_request#request' + target).show());
+  
+    });
+  }
   // modal
   $('.open_modal').on('click', function (e) {
     $('.modal').fadeIn();
@@ -170,4 +179,32 @@ $(document).ready(function () {
 
   // Submit form logic
 
+});
+
+const items = $('.quation_items .quation_mobile');
+let currentIndex = 0;
+// Funksiya: Faol elementni yangilash
+function updateContent() {
+  items.removeClass('active'); // Barcha elementlardan "active"ni olib tashlash
+  items.eq(currentIndex).addClass('active'); // Hozirgi elementga "active" qo'shish
+  $('#prev').prop('disabled', currentIndex === 0); // "Prev" tugmasini cheklash
+  $('#next').prop('disabled', currentIndex === items.length - 1); // "Next" tugmasini cheklash
+}
+
+// Boshlang'ich holat
+updateContent();
+
+// Tugmalar uchun voqealar
+$('#prev').click(function () {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateContent();
+  }
+});
+
+$('#next').click(function () {
+  if (currentIndex < items.length - 1) {
+    currentIndex++;
+    updateContent();
+  }
 });
