@@ -1,22 +1,54 @@
 .footer {
     margin-top: 139px;
+    @media (max-width:768px) {
+       padding-bottom: 80px;
+    }
+    @media (max-width:768px) {
+        margin-top: 0;
+    }
 
     &_top {
         background: #FFF;
         padding: 32px 0;
 
         a {
+            transition: all .2s linear;
             color: #131B23;
+
+            &:hover {
+                color: #007BFB;
+            }
+        }
+
+        .header_contacts {
+            @media (max-width:768px) {
+                display: none;
+            }
         }
     }
 
     &_items {
         margin-top: 36px;
+
+        @media (max-width:992px) {
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: flex-start !important;
+        }
+        @media (max-width:556px) {
+            gap: 0px 0;
+            justify-content: space-between!important;
+        }
     }
 
     &_item_lists {
         &.first {
             gap: 8px;
+
+            @media (max-width:556px) {
+                width: 65%;
+            }
 
             a {
                 color: #131B23;
@@ -54,6 +86,28 @@
                     line-height: normal;
                 }
             }
+
+            .footer_social {
+                display: none;
+
+                @media (max-width:556px) {
+                    margin-top: 20px;
+                    display: flex;
+                }
+            }
+        }
+        .footer_social{
+            gap: 11px;
+        }
+        &:nth-child(n+3){
+            @media (max-width:556px) {
+                width: calc(50% - 10px);
+                ul{
+                    display:flex;
+                    gap:10px;
+                    flex-direction: column;
+                }
+            }
         }
 
         a {
@@ -63,17 +117,48 @@
             font-weight: 400;
             line-height: normal;
         }
+        
     }
 
+    .footer_mobile_title {
+        color: #131B23;
+        width: 100%;
+        margin-top: 40px;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.33px;
+        margin-bottom: 28px;
+        
+    }
+    .bottom_mobile{
+        display: none;
+        @media (max-width:556px) {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            gap: 5px;
+        }
+    }
     &_bottom {
         padding: 67px 0 63px;
         gap: 261px;
         color: #131B23;
         font-size: 13px;
         font-weight: 400;
-        a{
+        @media (max-width:768px) {
+            gap: 0;
+            justify-content: space-between;
+        }
+        a {
             color: #131B23;
             text-decoration: underline;
+        }
+        &.mobile_none{
+            @media (max-width:556px) {
+                display: none;
+            }
         }
     }
 }

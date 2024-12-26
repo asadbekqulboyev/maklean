@@ -1,28 +1,86 @@
 .reviews{
     background: #FFF;
     padding: 105px 0 ;
+    @media (max-width:992px) {
+        padding: 80px 0;
+    }
+    @media (max-width:992px) {
+        padding: 40px 0;
+    }
+    @media (max-width:556px) {
+        padding: 40px 0 128px;
+        position: relative;
+    }
     .btn_lists{
         gap: 18px;
+        @media (max-width:556px) {
+           position: absolute;
+           bottom: 44px;
+           left: 0;right:0;
+           margin: 0 auto;
+           justify-content: center;
+        }
     }
     &_content{
         margin-top: 105px;
+        @media (max-width:992px) {
+            margin-top: 80px;
+        }
+        @media (max-width:768px) {
+            margin-top: 40px;
+        }
         .reviews_item{
             padding: 46px 59px;
             height: 507px;
             border: 1px solid #E8E9E9;
             background: #FFF;
-            box-shadow: 0px 4px 20px 0px #007BFBA1;
+            box-shadow: 0px 0px 14px  #007afc21;
             justify-content: space-between;
             @media (max-width:1159px) {
                 padding: 40px 30px;
               }
-            .reviews_logo{
+              @media (max-width:556px) {
+                padding: 40px 30px;
+                height: 331px;
+                box-shadow: 0 0 0;
+              }
+        .reviews_logo{
+            &:nth-child(1){
+                @media (max-width:556px) {
+                    height: 30px;
+                }
+            }
+           
                 img{
                     width: 100%;
                     object-fit: contain;
+                    @media (max-width:556px) {
+                      height: 200px;
+                      }
                 }
             }
+            
         }
-    }
+        .swiper-slide:nth-child(2){
+            .reviews_logo:nth-child(1){
+                @media (max-width:556px) {
+                height: 20px;
+            }
+        }}
+
+        .swiper-slide:nth-child(4){
+            .reviews_logo:nth-child(1){
+                @media (max-width:556px) {
+                height: 12px;
+            }
+        }
+        }
+        .swiper-slide:last-child{
+            .reviews_logo:nth-child(1){
+                @media (max-width:556px) {
+                height: 12px;
+            }
+        }
+    }}
 }
     

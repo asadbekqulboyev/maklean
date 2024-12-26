@@ -3,30 +3,63 @@
     background-size: cover;
     overflow: hidden;
     position: relative;
-    &_blue{
+
+    &_blue {
         position: absolute;
         right: 70%;
         top: -245px;
         @media (max-width:1159px) {
             right: 60%;
         }
+        @media (max-width:768px) {
+            top: -454px;
+        }
+        &.desctop{
+            @media (max-width:556px) {
+                display: none;
+            }
+        }
+        &.mobile{
+            display: none;
+            @media (max-width:556px) {
+                display: block;
+                top: -55px;
+                right: 60%;
+                height: 111%;
+            }
+        }
+        
     }
+
     &_info {
         padding-top: 334px;
         color: #F4F6FB;
         position: relative;
         z-index: 12;
+
         @media (max-width:992px) {
-           padding-top: 250px;
+            padding-top: 250px;
         }
+
+        @media (max-width:768px) {
+            padding-top: 192px;
+        }
+
         .top_title {
             color: #F4F6FB;
-            font-family: Montserrat;
             font-size: 22px;
             font-style: normal;
             font-weight: 400;
             letter-spacing: 0.11px;
             text-transform: uppercase;
+
+            @media (max-width:768px) {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0.06px;
+            }
+
         }
 
         h1 {
@@ -36,9 +69,20 @@
             line-height: 90.398px;
             letter-spacing: 2.31px;
             margin-top: 18px;
+
             @media (max-width:992px) {
                 font-size: 48px;
                 line-height: normal;
+            }
+
+            @media (max-width:768px) {
+                color: #F4F6FB;
+                text-shadow: 0px 7.835px 2.137px rgba(23, 35, 64, 0.00);
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 28.176px;
+                letter-spacing: 0.6px;
+                margin-top: 10px;
             }
         }
 
@@ -48,9 +92,15 @@
             font-weight: 500;
             line-height: 46.36px;
             letter-spacing: 0.4px;
+
             @media (max-width:992px) {
                 font-size: 36px;
                 line-height: normal;
+            }
+            @media (max-width:768px) {
+                margin-top: 10px;
+                font-size: 18px;
+                font-weight: 500;
             }
         }
     }
@@ -59,15 +109,30 @@
         padding-bottom: 172px;
         gap: 26px;
         margin-top: 91px;
+        @media (max-width:768px) {
+            margin-top: 104px;
+            flex-direction: column;
+            padding-bottom:49px;
+            gap: 16px;
+        }
         .button {
             font-size: 16px;
             font-weight: 700;
             text-transform: uppercase;
             padding: 26px 41px;
+            cursor: pointer;
+            @media (max-width:768px) {
+                padding: 16px 38px 16px;
+            }
         }
-        .btn_title{
+
+        .btn_title {
             color: #F4F6FB;
-            span{
+            @media (max-width:768px) {
+                text-align: center;
+                font-size: 12px;
+            }
+            span {
                 font-weight: 500;
             }
         }

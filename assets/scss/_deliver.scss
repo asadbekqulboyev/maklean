@@ -1,6 +1,13 @@
 .deliver {
     padding-top: 150px;
-
+    @media (max-width:992px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media (max-width:556px) {
+        padding-top: 60px;
+        padding-bottom:69px;
+    }
     &_top {
         .title_lists {
             li {
@@ -22,28 +29,75 @@
                 }
             }
         }
+        @media (max-width:556px) {
+            flex-direction: column;
+            align-items: flex-start !important;
+            gap: 37px;
+            .section_title{
+                br{
+                    display: none;
+                }
+            }
+        }
     }
-    &_items{
+
+    &_items {
         gap: 40px 0;
         margin-top: 103px;
+        @media (max-width:768px) {
+            gap: 20px 0;
+        }
+        @media (max-width:556px) {
+            margin-top: 41px;
+        }
     }
+
     &_item {
         width: calc(50% - 20px);
-        
+        @media (max-width:768px) {
+         width: calc(50% - 10px);
+         padding: 10px;
+        }
+        @media (max-width:556px) {
+            width:100%;
+            padding: 25px;
+            min-height: 160px;
+            display: flex;
+            align-items: center;
+           }
     }
 
     &_info {
         height: 100%;
         width: 100%;
         padding: 39px 39px;
-        .deiver_header{
+        @media (max-width:992px) {
+            padding: 25px;
+        }
+        @media (max-width:768px) {
+            padding: 0;
+           }
+           @media (max-width:556px) {
+            height: auto;
+           }
+        .deiver_header {
             @media (max-width:768px) {
                 cursor: pointer;
             }
-            .deliver_icon{
+           
+            .deliver_icon {
                 display: none;
+                @media (max-width:556px) {
+                    display: flex;
+                   }
+            }
+            &.active{
+                .deliver_icon{
+                    transform: rotate(-90deg);
+                }
             }
         }
+
         .deliver_title {
             color: #F4F6FB;
             font-family: 'Inter';
@@ -51,6 +105,11 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
+            @media (max-width:992px) {
+                font-family: 'Inter';
+                font-size: 18px;
+            }
         }
 
         .deliver_lists {
@@ -61,12 +120,17 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            ul{
+            @media (max-width:556px) {
+                display: none
+                ;
+               }
+            ul {
                 display: flex;
                 flex-direction: column;
                 gap: 4px;
             }
-            li{
+
+            li {
                 list-style: inside;
             }
         }

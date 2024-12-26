@@ -1,6 +1,5 @@
 .quations {
     background: #007BFB;
-
     .desctop_container {
         max-width: 1440px;
         margin: 0 auto;
@@ -9,11 +8,70 @@
         @media (max-width:1440px) {
             padding-left: 15px;
         }
+        @media (max-width:556px) {
+            display: none;
+        }
+        .quations_right {
+            width: 48%;
+            background: #fff;
+    
+            .quation_request {
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+    
+            .quation_info {
+                padding: 59px 42px;
+                @media (max-width:768px) {
+                    padding: 15px;
+                }
+                .quation_info_title {
+                    gap: 16px;
+                    color: #131B23;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 109.4%;
+                    letter-spacing: -0.195px;
+    
+                    .number {
+                        font-weight: 600;
+                        color: rgba(0, 123, 251, 0.60);
+                    }
+                }
+    
+                .quation_description_lists {
+                    color: #131B23;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-top: 22px;
+                    padding-left: 20px;
+                    li{
+                        list-style:inside;
+                        &:nth-child(5){
+                            margin-top: 14px;
+                            @media (max-width:768px) {
+                              margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+       
     }
+  
 
     &_left {
-        width: 52%;
         width: 525px;
+        @media (max-width:992px) {
+            width: 50%;
+        }
         .section_title {
             color: #F4F6FB;
         }
@@ -43,12 +101,18 @@
                 padding: 0 35px;
                 color: #F4F6FB;
                 cursor: pointer;
+                @media (max-width:768px) {
+                    padding: 0 15px;
+                }
                 &:nth-child(1) {
                     border-top: 0.89px solid #92C5FB;
                 }
 
                 .quation_item_left {
                     gap: 18px;
+                    @media (max-width:768px) {
+                        gap: 10px;
+                    }
                     .quation_item_title {
                         font-size: 13px;
                         font-style: normal;
@@ -117,51 +181,15 @@
         }
     }
 
-    &_right {
-        width: 48%;
-        background: #fff;
+   
 
-        .quation_request {
-            img {
-                width: 100%;
-                object-fit: contain;
-            }
+    .mobile_content{
+        display: none;
+        @media (max-width:556px) {
+            display: block;
         }
-
-        .quation_info {
-            padding: 59px 42px;
-
-            .quation_info_title {
-                gap: 16px;
-                color: #131B23;
-                font-size: 13px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 109.4%;
-                letter-spacing: -0.195px;
-
-                .number {
-                    font-weight: 600;
-                    color: rgba(0, 123, 251, 0.60);
-                }
-            }
-
-            .quation_description_lists {
-                color: #131B23;
-                font-size: 13px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                margin-top: 22px;
-                padding-left: 20px;
-                li{
-                    list-style:inside;
-                    &:nth-child(5){
-                        margin-top: 14px;
-                    }
-                }
-            }
+        .quation_request{
+            display: none;
         }
-
     }
 }
