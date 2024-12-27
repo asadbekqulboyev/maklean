@@ -1,0 +1,394 @@
+.service_wrapper {
+
+    .hero {
+        .hero_info {
+            padding-bottom: 476px !important;
+
+            @media (max-width:690px) {
+                padding-bottom: 350px !important;
+            }
+        }
+    }
+
+    .calculate {
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .container {
+            position: absolute;
+            // top: -50%;
+            margin: 0 auto;
+            bottom: -338px;
+            left: 0;
+            right: 0;
+            z-index: 111;
+
+            .form_quations {}
+
+            .calculate_content {
+                margin-top: 0;
+
+            }
+
+            .form_title {
+                text-shadow: 0px 19.567px 5.336px rgba(23, 35, 64, 0.00), 0px 12.452px 5.336px rgba(23, 35, 64, 0.01), 0px 7.115px 4.447px rgba(23, 35, 64, 0.03), 0px 3.558px 3.558px rgba(23, 35, 64, 0.04), 0px 0.889px 1.779px rgba(23, 35, 64, 0.05), 0px 0px 0px rgba(23, 35, 64, 0.05);
+                color: #535151;
+                text-shadow: 0px 19.567px 5.336px rgba(23, 35, 64, 0.00), 0px 12.452px 5.336px rgba(23, 35, 64, 0.01), 0px 7.115px 4.447px rgba(23, 35, 64, 0.03), 0px 3.558px 3.558px rgba(23, 35, 64, 0.04), 0px 0.889px 1.779px rgba(23, 35, 64, 0.05), 0px 0px 0px rgba(23, 35, 64, 0.05);
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+
+                @media (max-width:768px) {
+                    display: none;
+                }
+            }
+
+            .form_title~span {
+                color: #007BFB;
+                text-align: right;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 600;
+
+                @media (max-width:768px) {
+                    font-size: 20px;
+                }
+
+                b {
+                    font-size: 40px;
+
+                    @media (max-width:768px) {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .quiz_top {
+                @media (max-width:768px) {
+                    justify-content: center;
+                }
+            }
+
+            .quiz_title {
+                color: #131B23;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 107.4%;
+                letter-spacing: -0.45px;
+                margin-top: 52px;
+
+                @media (max-width:768px) {
+                    text-align: center;
+                    margin-top: 14px;
+                    font-size: 18px;
+                }
+            }
+
+
+            .form_items {
+                margin-top: 30px;
+
+            }
+        }
+    }
+
+    .service {
+        padding-top: 363px;
+
+        .service_info {
+            margin-top: 50px;
+            font-weight: 400;
+
+            @media (max-width:768px) {
+                margin-top: 22px;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 25px
+            }
+
+            p:last-child {
+                margin-top: 25px;
+
+                @media (max-width:768px) {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .service_forms {
+            margin-top: 100px;
+
+            @media (max-width:992px) {
+                gap: 35px;
+
+                flex-direction: column;
+            }
+
+            @media (max-width:768px) {
+                margin-top: 25px;
+            }
+
+            .service_lists {
+                gap: 21px;
+
+                @media (max-width:768px) {
+                    gap: 15px;
+                }
+
+                li {
+                    display: flex;
+                    gap: 16px;
+
+                    span {
+                        color: #007BFC;
+                    }
+                }
+
+                a {
+                    color: #606060;
+                    transition: all .2s linear;
+
+                    @media (max-width:768px) {
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 17px;
+                    }
+
+                    &:hover {
+                        color: #007BFC;
+                    }
+                }
+            }
+
+            .service_form {
+                border-radius: 35px;
+                background: #FFF;
+                box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.03);
+                padding: 55px 41px 40px;
+                width: 507px;
+                flex: 0 0 auto;
+
+                @media (max-width:992px) {
+                    width: 100%;
+                }
+
+                @media (max-width:768px) {
+                    border-radius: 15px;
+                    border: 4px solid #007BFB;
+                    background: #F4F6FB;
+                    padding: 28px 14px 34px;
+                }
+
+                &_title {
+                    color: #131B23;
+                    text-align: center;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+
+                    span {
+                        font-weight: 700;
+                    }
+
+                    @media (max-width:768px) {
+                        font-size: 17px;
+                    }
+                }
+
+                .form_inputs {
+                    gap: 17px;
+                    margin-top: 50px;
+                    @media (max-width:768px) {
+                        gap: 13px;
+                        margin-top: 25px;
+                    }
+                    input {
+                        outline: none;
+                        border-radius: 50px;
+                        border: 1px solid #D3D3D3;
+                        color: #616161;
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        padding: 21px 26px;
+                        @media (max-width:768px) {
+                           border-radius: 5px;
+                           padding: 12px;
+                           border: 1px solid #007BFB;
+                        }
+                    }
+
+
+                }
+
+                .form_btn {
+                    margin-top: 40px;
+
+                    @media (max-width:768px) {
+                        margin-top: 23px;
+                    }
+
+                    button {
+                        border-radius: 57px;
+                        background: #007BFB;
+                        color: #FFF;
+                        text-align: center;
+                        font-size: 16.606px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        text-transform: uppercase;
+                        width: 100%;
+                        margin: 0 auto;
+                        padding: 27px;
+                        border: 0;
+                        outline: none;
+                        cursor: pointer;
+                        @media (max-width:768px) {
+                            font-size: 13px;
+                            padding: 15px;
+                        }
+                    }
+
+                    label {
+                        cursor: pointer;
+                        width: 80%;
+                        margin: 0 auto;
+                        margin-top: 15px;
+                        gap: 8px;
+                    }
+
+                    span {
+                        color: #878787;
+                        font-size: 8px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+                .social_links{
+                    @media (max-width:768px) {
+                        margin-top: 23px;
+                    }
+                }
+            }
+
+        }
+
+        .service_bottom {
+            @media (max-width:992px) {
+                margin-top: 35px;
+            }
+
+            .service_price {
+                color: #007BFB;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120.7%;
+
+                span {
+                    font-size: 40px;
+                }
+            }
+
+            .price_action {
+                font-weight: 400;
+
+                p:first-child {
+                    width: 50%;
+                    margin-top: 9px;
+
+                    @media (max-width:992px) {
+                        width: 65%;
+                    }
+
+                    @media (max-width:556px) {
+                        width: 100%;
+                    }
+                }
+
+                p:last-child {
+                    margin-top: 30px;
+                    width: 75%;
+
+                    @media (max-width:992px) {
+                        width: 85%;
+                    }
+
+                    @media (max-width:556px) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .service_links {
+                margin-top: 57px;
+                padding-bottom: 159px;
+                gap: 24px;
+                @media (max-width:768px) {
+                    gap: 10px;
+                    margin-top: 22px;
+                    padding-bottom: 18px;
+                }
+                a {
+                    padding: 32px;
+                    border-radius: 20px;
+                    background: #FFF;
+                    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.03);
+
+                    @media (max-width:768px) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        position: relative;
+                        padding: 13px 16px;
+                        border-radius: 10px;
+                        img {
+                            position: absolute;
+                            right: 12px;
+                            top:calc(55% - 8px);
+                        }
+                    }
+
+                    .link_title {
+                        color: #30373F;
+                        font-size: 25px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+
+                        @media (max-width:768px) {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .price_sum {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        color: #007BFB;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        @media (max-width:768px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.products,
+.workflow,
+.partners,
+.reviews {
+    overflow: hidden;
+}

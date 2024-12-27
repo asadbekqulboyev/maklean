@@ -1,0 +1,19 @@
+
+.clean_wrapper{
+    .header.active{
+        background: #313940;
+    }
+    .hero_info{
+        padding-top: 146px;
+    }
+    .works{
+        padding-top: 278px;
+        @media (max-width:992px) {
+            padding-top: 178px;
+        }
+        @media (max-width:992px) {
+            padding-top: 158px;
+            padding-bottom: 0;
+        }
+    }
+}

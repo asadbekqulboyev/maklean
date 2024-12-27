@@ -33,6 +33,7 @@
 
     &_items {
         margin-top: 105px;
+        gap: 18px 0;
         @media (max-width:992px) {
             margin-top: 80px;
         }
@@ -47,6 +48,18 @@
         width: calc(33.33% - 12px);
         min-height: 339px;
         background-size: cover !important;
+        &:nth-child(4),
+        &:nth-child(5), 
+        &:nth-child(9),
+        &:nth-child(10),
+        &:nth-child(14),
+        &:nth-child(15){
+            width: calc(50% - 12.5px);
+            @media (max-width:768px) {
+                width: 100%;
+                min-height: auto;
+            }
+        }
         @media (max-width:992px) {
             // min-height: 300px;
         }
@@ -101,6 +114,64 @@
                     font-weight: 400;
                 }
             }
+        }
+    }
+    .pagination{
+        width: fit-content;
+        margin: 79px auto 0 ;
+        gap: 9px;
+        @media (max-width:556px) {
+            gap: 5px;
+            margin-top: 40px;
+        }
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 53px;
+            height: 42px;
+            border-radius: 20px;
+            background: #EDEFF1;
+            transition: all .2s linear;
+            color: #007BFC;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 23px;
+            letter-spacing: 0.16px;
+            @media (max-width:556px) {
+                min-width: 35px;
+                height: 26px;
+                font-size: 14px;
+
+            }
+            &:hover{
+                background: #007BFC;
+                color: #FFF;
+            }
+            &.active{
+                background: #007BFC;
+                color: #FFF;
+            }
+        }
+    }
+}
+.article_wrapper{
+    .header.active{
+        background: #313940;
+    }
+    .articles{
+        padding-top: 228px;
+        padding-bottom: 0;
+        @media (max-width:556px) {
+            padding-top: 170px;
+        }
+    }
+    .forms{
+        margin-top: 90px;
+        @media (max-width:556px) {
+            margin-top: 0;
         }
     }
 }

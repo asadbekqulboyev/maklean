@@ -13,6 +13,11 @@
 @import 'quations';
 @import 'forms';
 @import 'footer';
+// pages
+@import 'service';
+@import 'company';
+@import 'clean';
+@import 'maps';
 
 
 * {
@@ -260,16 +265,35 @@ li {
         padding-right: 25px;
     }
 
-    .social_links {
-        margin-top: 45px;
+}
+.social_links {
+    margin-top: 45px;
 
-        a {
-            gap: 13px;
-            color: #606060;
-            font-size: 18px;
-            font-style: normal;
-            text-decoration: underline;
-            font-weight: 500;
+    a {
+        gap: 13px;
+        color: #606060;
+        font-size: 18px;
+        font-style: normal;
+        text-decoration: underline;
+        font-weight: 500;
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+        .icon{
+            width: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 45px;
+            border: 1px solid #EEE;
+            @media (max-width:768px) {
+               width: 35px;
+               height: 35px;
+               img{
+                width: 20px;
+               }
+            }
         }
     }
 }

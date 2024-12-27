@@ -81,31 +81,62 @@ $(document).ready(function () {
     }
   );
   // tabs
- 
-
   if(innerWidth<650){
+    $('.quation_item.quation_mobile').click(function(){
+      $(".request_mobile").slideUp(10)
+      $('.quation_item.quation_mobile').removeClass('active')
+      $(this).next(".quation_request.request_mobile").slideDown()
+      $(this).addClass('active')
 
-    $('.quation_mobile').click(function(){
-      $(".request_mobile").slideUp()
-      $(this).next(".request_mobile").slideDown()
     })
-  }else{
-    $('.desctop_container .quation_request').hide();
-    $('.desctop_container .quation_request:first').show();
+    // 
+    const items = $('.quation_items .request_mobile');
+const items2 = $('.quation_items .quation_mobile');
+let currentIndex = 0;
+// Funksiya: Faol elementni yangilash
+function updateContent() {
+  items2.removeClass('active')
+  items.slideUp(); // Barcha elementlardan "active"ni olib tashlash
+  items.eq(currentIndex).slideDown(); // Hozirgi elementga "active" qo'shish
+  items2.eq(currentIndex).addClass('active')
+  $('#prev').prop('disabled', currentIndex === 0); // "Prev" tugmasini cheklash
+  $('#next').prop('disabled', currentIndex === items.length - 1); // "Next" tugmasini cheklash
+}
+
+// Boshlang'ich holat
+updateContent();
+
+// Tugmalar uchun voqealar
+$('.quation_btn.prev').click(function () {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateContent();
+  }
+});
+
+$('.quation_btn.next').click(function () {
+  if (currentIndex < items.length - 1) {
+    currentIndex++;
+    updateContent();
+  }
+});
+
+  }else
+  {
+    $('.desctop_container .quation_request:not(.request_mobile)').hide();
+    $('.desctop_container .quation_request:not(.request_mobile):first').show();
     $('.desctop_container .quation_item').click(function () {
       // Hamma tugmalar va ma'lumotlardan `active` klassini olib tashlash
       $('.quation_item').removeClass('active');
       $('.quation_request').fadeOut(0);
       // Joriy tugmaga `active` klassini qo'shish
       $(this).addClass('active');
-  
       // Tegishli ma'lumotni ko'rsatish
       const target = $(this).data('target');
       $('.quation_request#request' + target).fadeIn(200);
-      console.log($('.quation_request#request' + target).show());
-  
     });
   }
+  
   // modal
   $('.open_modal').on('click', function (e) {
     $('.modal').fadeIn();
@@ -117,94 +148,78 @@ $(document).ready(function () {
       $(this).fadeOut();
     }
   });
+  // deliver accardion
   $('.deiver_header').click(function () {
     $(this).toggleClass('active')
     $(this).next('.deliver_lists').slideToggle()
   })
-});
-
-$(document).ready(function () {
-  let currentQuestion = 0;
-  const totalQuestions = 4;
-
-  // Functions to show/hide questions
-  function showQuestion(index) {
-    $('.form_items').fadeOut(0);
-    $(`.form_items[data-index="${index}"]`).fadeIn();
-    updateProgress();
+// checkbox is true
+$('form').each(function () {
+  const form = $(this); 
+  const submitButton = form.find('button[type="submit"]');
+  function checkFormCheckboxes() {
+    const isChecked = form.find('input:checkbox:checked').length > 0;
+    submitButton.prop('disabled', !isChecked);
   }
-
-  // Progress bar update function
-  function updateProgress() {
-    const completedInputs = $(".form_items input:checked").length;
-    const progress = ((completedInputs + (currentQuestion === totalQuestions ? 1 : 0)) / (totalQuestions + 1)) * 100;
-    $('.progres_thumb').css('width', `${progress}%`);
-    $('.progress_number').text(`${Math.round(progress)}%`);
-    if (progress == 100) {
-      $('.form_quations').fadeOut(0)
-      $('.form_inputs').fadeIn(0)
-    } else {
-      $('.form_quations').fadeIn()
-      //  $('.form_inputs').fadeOut(0)
-    }
-
-  }
-  // "Previous" button logic
-  $('.prev_btn').on('click', function () {
-    if (currentQuestion > 0) {
-      currentQuestion--;
-      showQuestion(currentQuestion);
+  checkFormCheckboxes();
+  form.find('input:checkbox').on('change', checkFormCheckboxes);
+  form.on('submit', function (event) {
+    if (form.find('input:checkbox:checked').length === 0) {
+      event.preventDefault();
     }
   });
-
-  // "Next" button logic
-  $('.next_btn').on('click', function () {
-    const currentInputChecked = $(`.form_items[data-index="${currentQuestion}"] input:checked`).length;
-    if (currentInputChecked === 0) {
-      return;
-    }
-    if (currentQuestion < totalQuestions) {
-      currentQuestion++;
-      showQuestion(currentQuestion);
-    }
-  });
-
-  // Input change listener to update progress
-  $(".form_items input").on("change", function () {
-    updateProgress();
-  });
-
-  // Initial setup
-  showQuestion(currentQuestion);
-
-  // Submit form logic
-
 });
+// quiz
+let currentQuestion = 0;
+const totalQuestions = 4;
 
-const items = $('.quation_items .quation_mobile');
-let currentIndex = 0;
-// Funksiya: Faol elementni yangilash
-function updateContent() {
-  items.removeClass('active'); // Barcha elementlardan "active"ni olib tashlash
-  items.eq(currentIndex).addClass('active'); // Hozirgi elementga "active" qo'shish
-  $('#prev').prop('disabled', currentIndex === 0); // "Prev" tugmasini cheklash
-  $('#next').prop('disabled', currentIndex === items.length - 1); // "Next" tugmasini cheklash
+// Functions to show/hide questions
+function showQuestion(index) {
+  $('.form_items').fadeOut(0);
+  $(`.form_items[data-index="${index}"]`).fadeIn();
+  updateProgress();
 }
 
-// Boshlang'ich holat
-updateContent();
+// Progress bar update function
+function updateProgress() {
+  const completedInputs = $(".form_items input:checked").length;
+  const progress = ((completedInputs + (currentQuestion === totalQuestions ? 1 : 0)) / (totalQuestions + 1)) * 100;
+  $('.progres_thumb').css('width', `${progress}%`);
+  $('.progress_number').text(`${Math.round(progress)}%`);
+  if (progress == 100) {
+    $('.form_quations').fadeOut(0)
+    $('.form_inputs').fadeIn(0)
+  } else {
+    $('.form_quations').fadeIn()
+    //  $('.form_inputs').fadeOut(0)
+  }
 
-// Tugmalar uchun voqealar
-$('#prev').click(function () {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateContent();
+}
+// "Previous" button logic
+$('.prev_btn').on('click', function () {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    showQuestion(currentQuestion);
   }
 });
 
-$('#next').click(function () {
-  if (currentIndex < items.length - 1) {
-    currentIndex++;
-    updateContent();
+// "Next" button logic
+$('.next_btn').on('click', function () {
+  const currentInputChecked = $(`.form_items[data-index="${currentQuestion}"] input:checked`).length;
+  if (currentInputChecked === 0) {
+    return;
   }
+  if (currentQuestion < totalQuestions) {
+    currentQuestion++;
+    showQuestion(currentQuestion);
+  }
+});
+
+// Input change listener to update progress
+$(".form_items input").on("change", function () {
+  updateProgress();
+});
+
+// Initial setup
+showQuestion(currentQuestion);
 });

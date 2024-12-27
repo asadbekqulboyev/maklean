@@ -1,0 +1,37 @@
+.company_wrapper {
+    .hero {
+        .title_big {
+            padding-bottom: 160px;
+            font-size: 60px;
+
+            @media (max-width:768px) {
+                font-size: 30px;
+                letter-spacing: normal;
+            }
+        }
+
+        .hero_blue.mobile {
+            top: -20px;
+        }
+    }
+
+    .company {
+        padding-top: 68px;
+
+        &_text {
+            gap: 15px;
+            color: #131B23;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 34px;
+            @media (max-width:768px) {
+                font-size: 18px;
+                gap: 9px;
+            }
+        }
+    }
+    .partners{
+        padding-bottom: 89px;
+    }
+}
