@@ -62,6 +62,11 @@ $(document).ready(function () {
       }
     }
   })
+  $('.dropdown').click(function (e) { 
+    e.preventDefault()
+    $(this).next('.drop_lists').slideToggle()
+    $(this).toggleClass('active')
+   })
   // hover partners
   $('.partners_item').hover(
     function () {
@@ -111,7 +116,7 @@ $('.quation_btn.next').click(function () {
   }
 })
  }else{
-  
+
   $('.desctop_container .quation_request:not(.request_mobile)').hide();
   $('.desctop_container .quation_request:not(.request_mobile):first').show();
   $('.desctop_container .quation_item').click(function () {

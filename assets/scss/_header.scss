@@ -6,15 +6,23 @@
     padding-top: 45px;
     padding-bottom: 43px;
     z-index: 1001;
-    overflow: hidden;
+    // overflow: hidden;
     transition: all .2s linear;
 
     .logo {
         gap: 5px;
-
+        .mobile_img{
+            display: none;
+            @media (max-width:556px) {
+                display: inline-block;
+            }
+        }
         @media (max-width:556px) {
             flex-direction: column;
             align-items: flex-start !important;
+            .desctop_logo{
+                display: none;
+            }
         }
 
         img:first-child {
@@ -75,6 +83,9 @@
         color: #F4F6FB;
         transition: all .2s linear;
 
+        @media (max-width:992px) {
+            font-size:15px;
+        }
         &:hover {
             color: #007BFC;
         }
@@ -99,6 +110,56 @@
 
         @media (max-width:768px) {
             display: none !important;
+        }
+
+        li:first-child {
+            position: relative;
+            a{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                img{
+                    transition: all .2s linear;
+                }
+                &.active{
+                    img{
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+            ul {
+                position: absolute;
+                background: transparent;
+                top: 35px;
+                background: #313940;
+                padding: 5px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgb(46, 48, 67);
+                min-width: 220px;
+                display: none;
+                &::after {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    background: #313940;
+                    transform: rotate(45deg);
+                    z-index: 2;
+                    left: 5;
+                    position: absolute;
+                    top: -6px;
+                    border-radius:3px;
+                }
+
+                a {
+                    padding: 5px;
+                    background: #313940;
+                    display: block;
+                    position: relative;
+                    z-index: 11;
+                    
+                }
+            }
         }
     }
 
@@ -129,6 +190,7 @@
             gap: 18px;
         }
     }
+
     .mobile_menu {
         padding: 17px 15px 14px;
         border: 1px solid #F4F6FB;
@@ -137,9 +199,11 @@
         bottom: 0;
         width: 100%;
         display: none;
+
         @media (max-width:768px) {
             display: flex;
         }
+
         a {
             gap: 5px;
             color: #F4F6FB;
@@ -147,6 +211,7 @@
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+
             img {
                 height: 19px;
             }

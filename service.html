@@ -13,14 +13,19 @@
 <body>
     <div class="wrappper service_wrapper">
         <!-- header -->
-        <header class="header "  data-aos="fade-up">
+        <header class="header ">
             <div class="container  flex a_center between">
                 <div class="flex header_left  a_center">
-                    <!-- logo -->
-                    <a href="index.html" class="a_end flex logo  "><img src="./assets/images/logo.svg" alt=""><img src="assets/images/text_logo.svg" alt=""></a>
-                    <!-- menu listst -->
+                   <!-- logo -->
+                   <a href="index.html" class="a_end flex logo"><img src="./assets/images/logo.svg" alt="" class="desctop_logo"> <img src="./assets/images/mobile_logo.svg" alt="" class="mobile_img"></a>
+                   <!-- menu listst -->
                     <ul class=" flex a_center header_menu_lists">
-                        <li><a href="clean.html">Клининг</a></li>
+                        <li><a href="clean.html" class="dropdown"><span>Клининг</span> <img src="./assets/images/drop_icon.svg" alt=""></a>
+                        <ul class="drop_lists">
+                            <li><a href="clean.html">Клининг</a></li>
+                            <li><a href="service.html">Генеральная уборка</a></li>
+                        </ul>
+                        </li>
                         <li><a href="post.html">Статьи</a></li>
                         <li><a href="company.html">О компании</a></li>
                         <li><a href="maps.html">Контакты</a></li>
@@ -38,11 +43,11 @@
                 </div>
             </div>
             <ul class="mobile_menu flex between">
-                <li><a href="" class="flex column a_center"><img src="assets/images/logo.svg" alt=""><span>Главная</span></a></li>
-                <li><a href="" class="flex column a_center"><img src="assets/images/mobile_menu_item2.svg" alt=""><span>Клининг</span></a></li>
-                <li><a href="" class="flex column a_center"><img src="assets/images/mobile_menu_item3.svg" alt=""><span>Статьи</span></a></li>
+                <li><a href="index.html" class="flex column a_center"><img src="assets/images/mobile_home.svg" alt=""><span>Главная</span></a></li>
+                <li><a href="clean.html" class="flex column a_center"><img src="assets/images/mobile_menu_item2.svg" alt=""><span>Клининг</span></a></li>
+                <li><a href="post.html" class="flex column a_center"><img src="assets/images/mobile_menu_item3.svg" alt=""><span>Статьи</span></a></li>
                 <li><a href="" class="flex column a_center"><img src="assets/images/mobile_menu_item4.svg" alt=""><span>О нас</span></a></li>
-                <li><a href="" class="flex column a_center"><img src="assets/images/mobile_menu_item5.svg" alt=""><span>Контакты</span></a></li>
+                <li><a href="maps.html" class="flex column a_center"><img src="assets/images/mobile_menu_item5.svg" alt=""><span>Контакты</span></a></li>
             </ul>
         </header>
         <!-- main -->
