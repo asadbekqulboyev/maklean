@@ -1,12 +1,13 @@
+
 $(document).ready(function () {
   // scroll header
   // $(window).scroll(function () { 
-  //   if(scrollY>130){
-  //     $('.header_wrapper .header').addClass('active')
-  //   }else{
-  //     $('.header_wrapper .header').removeClass('active')
-  //   }
-  // });
+    //   if(scrollY>130){
+      //     $('.header_wrapper .header').addClass('active')
+      //   }else{
+        //     $('.header_wrapper .header').removeClass('active')
+        //   }
+        // });
   // slide products
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 4,
@@ -18,11 +19,11 @@ $(document).ready(function () {
     breakpoints: {
       0: {
         slidesPerView: 1.2,
-
+        
       },
       556: {
         slidesPerView: 2.4,
-
+        
       },
       768: {
         slidesPerView: 3,
@@ -45,12 +46,12 @@ $(document).ready(function () {
       0: {
         slidesPerView: 1.5,
         spaceBetween: 20,
-
+        
       },
       556: {
         slidesPerView: 1.8,
         spaceBetween: 30,
-
+        
       },
       768: {
         spaceBetween: 40,
@@ -63,7 +64,7 @@ $(document).ready(function () {
       },
       1159: {
         spaceBetween: 60,
-
+        
         slidesPerView: 3,
       }
     }
@@ -74,7 +75,7 @@ $(document).ready(function () {
       // Hozirgi elementga active klassini qo'shish
       $('.partners_item').removeClass('active');
       $(this).addClass('active');
-
+      
       // // Oldingi elementni olish va active qo'shish
       // $(this).prev('.partners_item').addClass('active');
       // Hoverdan chiqishda barcha active klasslarini olib tashlash
@@ -91,7 +92,7 @@ $(document).ready(function () {
     })
     // 
     const items = $('.quation_items .request_mobile');
-const items2 = $('.quation_items .quation_mobile');
+    const items2 = $('.quation_items .quation_mobile');
 let currentIndex = 0;
 // Funksiya: Faol elementni yangilash
 function updateContent() {
@@ -121,11 +122,11 @@ $('.quation_btn.next').click(function () {
   }
 });
 
-  }else
-  {
-    $('.desctop_container .quation_request:not(.request_mobile)').hide();
-    $('.desctop_container .quation_request:not(.request_mobile):first').show();
-    $('.desctop_container .quation_item').click(function () {
+}else
+{
+  $('.desctop_container .quation_request:not(.request_mobile)').hide();
+  $('.desctop_container .quation_request:not(.request_mobile):first').show();
+  $('.desctop_container .quation_item').click(function () {
       // Hamma tugmalar va ma'lumotlardan `active` klassini olib tashlash
       $('.quation_item').removeClass('active');
       $('.quation_request').fadeOut(0);
@@ -141,7 +142,7 @@ $('.quation_btn.next').click(function () {
   $('.open_modal').on('click', function (e) {
     $('.modal').fadeIn();
   });
-
+  
   // Modalni yopish - modalning fonini bosganda
   $('.modal').on('click', function (e) {
     if ($(e.target).is('.modal')) {
@@ -193,7 +194,7 @@ function updateProgress() {
     $('.form_quations').fadeIn()
     //  $('.form_inputs').fadeOut(0)
   }
-
+  
 }
 // "Previous" button logic
 $('.prev_btn').on('click', function () {
@@ -222,4 +223,9 @@ $(".form_items input").on("change", function () {
 
 // Initial setup
 showQuestion(currentQuestion);
+// aos 
+
+// AOS.init();
 });
+
+AOS.init();
