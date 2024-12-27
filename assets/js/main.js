@@ -1,17 +1,10 @@
 
 $(document).ready(function () {
-  // scroll header
-  // $(window).scroll(function () { 
-    //   if(scrollY>130){
-      //     $('.header_wrapper .header').addClass('active')
-      //   }else{
-        //     $('.header_wrapper .header').removeClass('active')
-        //   }
-        // });
   // slide products
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 4,
     spaceBetween: 100,
+    loop:true,
     navigation: {
       nextEl: '.products .prev',
       prevEl: '.products .next',
@@ -76,9 +69,6 @@ $(document).ready(function () {
       $('.partners_item').removeClass('active');
       $(this).addClass('active');
       
-      // // Oldingi elementni olish va active qo'shish
-      // $(this).prev('.partners_item').addClass('active');
-      // Hoverdan chiqishda barcha active klasslarini olib tashlash
     }
   );
   // tabs
@@ -88,7 +78,6 @@ $(document).ready(function () {
       $('.quation_item.quation_mobile').removeClass('active')
       $(this).next(".quation_request.request_mobile").slideDown()
       $(this).addClass('active')
-
     })
     // 
     const items = $('.quation_items .request_mobile');
@@ -120,10 +109,9 @@ $('.quation_btn.next').click(function () {
     currentIndex++;
     updateContent();
   }
-});
-
-}else
-{
+})
+ }else{
+  
   $('.desctop_container .quation_request:not(.request_mobile)').hide();
   $('.desctop_container .quation_request:not(.request_mobile):first').show();
   $('.desctop_container .quation_item').click(function () {

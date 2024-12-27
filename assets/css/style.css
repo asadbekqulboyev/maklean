@@ -2100,6 +2100,7 @@
 .forms .form .checked_text {
   padding-left: 15px;
   gap: 8px;
+  cursor: pointer;
 }
 .forms .form .checked_text span {
   color: #F0F0F0;
@@ -2236,6 +2237,10 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  transition: all 0.2s linear;
+}
+.footer_item_lists a:hover {
+  color: #007BFB;
 }
 .footer .footer_mobile_title {
   color: #131B23;
@@ -2281,6 +2286,10 @@
 .footer_bottom a {
   color: #131B23;
   text-decoration: underline;
+  transition: all 0.2s linear;
+}
+.footer_bottom a:hover {
+  color: #007BFB;
 }
 @media (max-width: 556px) {
   .footer_bottom.mobile_none {
