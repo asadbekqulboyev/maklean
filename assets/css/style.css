@@ -353,6 +353,11 @@
     padding: 16px 38px 16px;
   }
 }
+@media (max-width: 556px) {
+  .hero_btn .button {
+    font-size: 13px;
+  }
+}
 .hero_btn .btn_title {
   color: #F4F6FB;
 }
@@ -844,7 +849,7 @@
   .workflow_item {
     background: #FFF;
     min-height: 101px;
-    gap: 10px;
+    gap: 25px;
     padding: 15px;
   }
 }
@@ -874,6 +879,7 @@
     color: #007BFB;
     width: auto;
     height: auto;
+    font-size: 14px;
   }
 }
 .workflow_item .workflow_description {
@@ -901,6 +907,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+@media (max-width: 556px) {
+  .workflow_item .workflow_description ul {
+    gap: 8px;
+  }
+  .workflow_item .workflow_description ul img {
+    width: 14px;
+  }
 }
 
 .products {
@@ -1027,6 +1041,7 @@
 @media (max-width: 556px) {
   .deliver_items {
     margin-top: 41px;
+    gap: 10px 0;
   }
 }
 .deliver_item {
@@ -1042,7 +1057,7 @@
   .deliver_item {
     width: 100%;
     padding: 25px;
-    min-height: 160px;
+    min-height: 116px;
     display: flex;
     align-items: center;
   }
@@ -1677,12 +1692,17 @@
   font-style: normal;
   font-weight: 500;
 }
-.articles_item .articles_top .span {
+.articles_item .articles_top span {
   color: #F4F6FB;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
   line-height: 109.4%;
+}
+@media (max-width: 768px) {
+  .articles_item .articles_top span {
+    line-height: normal;
+  }
 }
 .articles_item .articles_info {
   padding: 33px 35px;
@@ -2266,6 +2286,10 @@
 }
 .footer_item_lists.first {
   gap: 8px;
+  color: #131B23;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
 }
 @media (max-width: 556px) {
   .footer_item_lists.first {

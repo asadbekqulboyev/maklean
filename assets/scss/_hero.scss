@@ -115,6 +115,7 @@
             padding-bottom:49px;
             gap: 16px;
         }
+        
         .button {
             font-size: 16px;
             font-weight: 700;
@@ -123,6 +124,9 @@
             cursor: pointer;
             @media (max-width:768px) {
                 padding: 16px 38px 16px;
+            }
+            @media (max-width:556px) {
+                font-size: 13px;
             }
         }
 

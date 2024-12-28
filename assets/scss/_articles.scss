@@ -74,12 +74,15 @@
                 font-weight: 500;
             }
 
-            .span {
+            span {
                 color: #F4F6FB;
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 109.4%;
+                @media (max-width:768px) {
+                    line-height: normal;
+                }
             }
         }
 

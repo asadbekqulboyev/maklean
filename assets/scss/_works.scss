@@ -203,7 +203,7 @@
         @media (max-width:556px) {
             background: #FFF;
             min-height: 101px;
-            gap: 10px;
+            gap: 25px;
             padding: 15px;
         }
         .workflow_item_title{
@@ -230,6 +230,7 @@
                 color: #007BFB;
                 width: auto;
                 height: auto;
+                font-size: 14px;
             }
         }
 
@@ -257,6 +258,12 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                @media (max-width:556px) {
+                    gap: 8px;
+                    img{
+                        width: 14px;
+                    }
+                }
             }
         }
     }

@@ -51,7 +51,10 @@
     &_item_lists {
         &.first {
             gap: 8px;
-
+            color: #131B23;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
             @media (max-width:556px) {
                 width: 65%;
             }

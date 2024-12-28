@@ -49,6 +49,7 @@
         }
         @media (max-width:556px) {
             margin-top: 41px;
+            gap: 10px 0;
         }
     }
 
@@ -61,10 +62,11 @@
         @media (max-width:556px) {
             width:100%;
             padding: 25px;
-            min-height: 160px;
+            min-height: 116px;
             display: flex;
             align-items: center;
            }
+          
     }
 
     &_info {
@@ -110,6 +112,7 @@
                 font-family: 'Inter';
                 font-size: 18px;
             }
+            
         }
 
         .deliver_lists {
@@ -135,4 +138,5 @@
             }
         }
     }
+    
 }
