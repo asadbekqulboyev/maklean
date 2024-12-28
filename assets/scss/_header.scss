@@ -199,7 +199,7 @@
         bottom: 0;
         width: 100%;
         display: none;
-
+        z-index: 12121;
         @media (max-width:768px) {
             display: flex;
         }

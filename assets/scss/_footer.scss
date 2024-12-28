@@ -25,6 +25,12 @@
                 display: none;
             }
         }
+        @media (max-width:768px) {
+            padding: 24px 0 20px;
+            img{
+                height: 24px;
+            }
+        }
     }
 
     &_items {

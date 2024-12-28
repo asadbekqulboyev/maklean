@@ -114,7 +114,10 @@
             background: #F4F6FB;
             outline: none;
             cursor: pointer;
-
+            @media (max-width:992px) {
+                padding: 18px 24px;
+                font-size: 14px;
+            }
             @media (max-width:768px) {
                 border-radius: 48.176px;
                 border: 0.877px solid #007BFB;
@@ -149,6 +152,13 @@
                 gap: 6px;
                 
             }
+        }
+    }
+    .social_links{
+        display: none ;
+        @media (max-width:768px) {
+            display: flex;
+            margin-top: 3px;
         }
     }
 }
