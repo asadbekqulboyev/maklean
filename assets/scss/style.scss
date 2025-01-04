@@ -194,6 +194,9 @@ li {
         inset: 0;
         height: fit-content;
         margin: auto auto;
+        @media (max-width:556px) {
+            padding: 34px 22px 21px 30px;  
+        }
     }
 
     &_form {
@@ -237,6 +240,9 @@ li {
                 border: none;
                 cursor: pointer;
                 padding: 27px 40px;
+                @media (max-width:556px) {
+                    padding: 18px 20px;
+                }
             }
         }
     }
@@ -248,7 +254,9 @@ li {
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-
+        @media (max-width:556px) {
+            font-size: 18px;
+        }
         span {
             font-weight: 700;
         }
@@ -271,7 +279,9 @@ li {
 }
 .social_links {
     margin-top: 45px;
-
+    @media (max-width:556px) {
+        margin-top: 24px;
+    }
     a {
         gap: 13px;
         color: #606060;

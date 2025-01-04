@@ -3228,6 +3228,11 @@ li {
   height: fit-content;
   margin: auto auto;
 }
+@media (max-width: 556px) {
+  .modal .modal_container {
+    padding: 34px 22px 21px 30px;
+  }
+}
 .modal_form .form_input {
   gap: 16px;
   margin-top: 45px;
@@ -3266,6 +3271,11 @@ li {
   cursor: pointer;
   padding: 27px 40px;
 }
+@media (max-width: 556px) {
+  .modal_form .form_btn button {
+    padding: 18px 20px;
+  }
+}
 .modal_title {
   color: #131B23;
   text-align: center;
@@ -3273,6 +3283,11 @@ li {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+@media (max-width: 556px) {
+  .modal_title {
+    font-size: 18px;
+  }
 }
 .modal_title span {
   font-weight: 700;
@@ -3293,6 +3308,11 @@ li {
 
 .social_links {
   margin-top: 45px;
+}
+@media (max-width: 556px) {
+  .social_links {
+    margin-top: 24px;
+  }
 }
 .social_links a {
   gap: 13px;
