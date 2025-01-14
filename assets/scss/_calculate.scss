@@ -40,9 +40,11 @@
         .form_items {
             gap: 8px 0;
             margin-top: 40px;
+            
             @media (max-width:768px) {
                 flex-direction: column;
             }
+
             .form_item {
                 width: calc(50% - 14px);
                 position: relative;
