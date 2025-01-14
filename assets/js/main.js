@@ -138,7 +138,7 @@ $('.quation_btn.next').click(function () {
   
   // Modalni yopish - modalning fonini bosganda
   $('.modal').on('click', function (e) {
-    if ($(e.target).is('.modal')) {
+    if ($(e.target).is('.modal')||$(e.target).is('.exit_modal')) {
       $(this).fadeOut();
     }
   });
