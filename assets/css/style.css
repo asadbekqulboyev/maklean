@@ -899,6 +899,19 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  align-items: center;
+}
+.workflow_item .workflow_description .social {
+  align-items: center;
+}
+.workflow_item .workflow_description .social span {
+  padding-left: 13px;
+}
+.workflow_item .workflow_description .social ul {
+  padding-left: 13px;
+}
+.workflow_item .workflow_description .social ul img {
+  width: 18px;
 }
 @media (max-width: 556px) {
   .workflow_item .workflow_description {

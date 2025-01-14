@@ -241,6 +241,19 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            align-items: center;
+            .social {
+                align-items: center;
+                span{
+                    padding-left: 13px;
+                }
+                ul{
+                    padding-left: 13px;
+                    img{
+                        width: 18px;
+                    }
+                }
+            }
             @media (max-width:556px) {
                 font-size: 10px;
                 }
