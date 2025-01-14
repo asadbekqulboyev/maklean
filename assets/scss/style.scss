@@ -187,16 +187,22 @@ li {
             position: absolute;
             width: 45px;
             height: 45px;
-            right: 10px;
-            top: 10px;
+            right: -20px;
+            top: -20px;
             font-size: 35px;
-            background: #fffffff0;
+            background: #fff;
             display: flex;
             justify-content: center;
             border-radius: 50%;
             align-items: center;
             cursor: pointer;
             transition: all .2s linear;
+            @media (max-width:556px) {
+                top: 5px;
+                right: 10px;
+                width: fit-content;
+                height: fit-content;
+            }
             &:hover{
                 opacity: .9;
             }
@@ -212,7 +218,8 @@ li {
         height: fit-content;
         margin: auto auto;
         @media (max-width:556px) {
-            padding: 34px 22px 21px 30px;  
+            padding: 34px 22px 21px 30px; 
+            border-radius: 20px;
         }
         
     }
