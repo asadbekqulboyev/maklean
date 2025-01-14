@@ -87,34 +87,35 @@ $(document).ready(function () {
     // 
     const items = $('.quation_items .request_mobile');
     const items2 = $('.quation_items .quation_mobile');
-let currentIndex = 0;
-// Funksiya: Faol elementni yangilash
-function updateContent() {
-  items2.removeClass('active')
-  items.slideUp(); // Barcha elementlardan "active"ni olib tashlash
-  items.eq(currentIndex).slideDown(); // Hozirgi elementga "active" qo'shish
-  items2.eq(currentIndex).addClass('active')
-  $('#prev').prop('disabled', currentIndex === 0); // "Prev" tugmasini cheklash
-  $('#next').prop('disabled', currentIndex === items.length - 1); // "Next" tugmasini cheklash
-}
-
-// Boshlang'ich holat
-updateContent();
-
-// Tugmalar uchun voqealar
-$('.quation_btn.prev').click(function () {
-  if (currentIndex > 0) {
-    currentIndex--;
+    let currentIndex = 0;
+    // Funksiya: Faol elementni yangilash
+    function updateContent() {
+      items2.removeClass('active')
+      items.slideUp(); // Barcha elementlardan "active"ni olib tashlash
+      items.eq(currentIndex).slideDown(); // Hozirgi elementga "active" qo'shish
+      items2.eq(currentIndex).addClass('active')
+      $('#prev').prop('disabled', currentIndex === 0); // "Prev" tugmasini cheklash
+      $('#next').prop('disabled', currentIndex === items.length - 1); // "Next" tugmasini cheklash
+    }
+    // Boshlang'ich holat
     updateContent();
-  }
-});
-
-$('.quation_btn.next').click(function () {
-  if (currentIndex < items.length - 1) {
-    currentIndex++;
-    updateContent();
-  }
-})
+    // Tugmalar uchun voqealar
+    $('.quation_btn.prev').click(function () {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateContent();
+      }
+    });
+    $('.quation_btn.next').click(function () {
+      if (currentIndex < items.length - 1) {
+        currentIndex++;
+        updateContent();
+      }
+    })
+    $('.deiver_header').click(function () {
+      $(this).toggleClass('active')
+      $(this).next('.deliver_lists').slideToggle()
+    })
  }else{
 
   $('.desctop_container .quation_request:not(.request_mobile)').hide();
@@ -129,6 +130,7 @@ $('.quation_btn.next').click(function () {
       const target = $(this).data('target');
       $('.quation_request#request' + target).fadeIn(200);
     });
+    
   }
   
   // modal
@@ -143,10 +145,7 @@ $('.quation_btn.next').click(function () {
     }
   });
   // deliver accardion
-  $('.deiver_header').click(function () {
-    $(this).toggleClass('active')
-    $(this).next('.deliver_lists').slideToggle()
-  })
+
 // checkbox is true
 $('form').each(function () {
   const form = $(this); 
