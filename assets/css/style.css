@@ -909,6 +909,7 @@
 }
 .workflow_item .workflow_description .social ul {
   padding-left: 13px;
+  align-items: center;
 }
 .workflow_item .workflow_description .social ul img {
   width: 18px;
