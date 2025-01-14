@@ -53,7 +53,6 @@
 
     &.active {
         background: #313940;
-
         &::after {
             content: '';
             width: 30%;
@@ -118,6 +117,13 @@
                 display: flex;
                 align-items: center;
                 gap: 5px;
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 13px;
+                    height: 4px;
+                    background: url('../images/drop_icon.svg') no-repeat center;
+                }
                 img{
                     transition: all .2s linear;
                 }
@@ -157,7 +163,9 @@
                     display: block;
                     position: relative;
                     z-index: 11;
-                    
+                    &::after{
+                        display: none;
+                    }
                 }
             }
         }
