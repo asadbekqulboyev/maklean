@@ -77,6 +77,18 @@ $(document).ready(function () {
     }
   );
   // tabs
+  let maxHeight = 0;
+
+  // Eng katta balandlikni topish
+  $(".quation_request").each(function () {
+    const height = $(this).outerHeight();
+    if (height > maxHeight) {
+      maxHeight = height;
+    }
+  });
+
+  // Barcha elementlarga eng katta balandlikni qo'llash
+  $(".quation_request").height(maxHeight);
   if(innerWidth<650){
     $('.quation_item.quation_mobile').click(function(){
       $(".request_mobile").slideUp(10)
@@ -129,6 +141,7 @@ $(document).ready(function () {
       // Tegishli ma'lumotni ko'rsatish
       const target = $(this).data('target');
       $('.quation_request#request' + target).fadeIn(200);
+      
     });
     
   }

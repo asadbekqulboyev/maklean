@@ -16,23 +16,28 @@
             margin-left: 15px;
             justify-content: center !important;
         }
+
         @media (max-width:1300px) {
             max-width: 1160px;
             margin-left: auto;
             justify-content: space-between !important;
         }
+
         @media (max-width:1160px) {
             max-width: 962px;
         }
+
         @media (max-width:992px) {
             max-width: 738px;
-            
+
         }
+
         @media (max-width:768px) {
             max-width: 526px;
             padding-left: 0;
             padding-right: 0;
         }
+
         @media (max-width:650px) {
             padding-left: 15px;
             flex-direction: column;
@@ -45,12 +50,12 @@
             width: 48%;
             background: #fff;
             display: block;
+
             @media (max-width:650px) {
                 display: none;
             }
 
             .quation_request {
-
                 img {
                     width: 100%;
                     object-fit: contain;
@@ -59,6 +64,10 @@
 
             .quation_info {
                 padding: 59px 42px;
+
+                @media (max-width:992px) {
+                    padding: 25px;
+                }
 
                 @media (max-width:768px) {
                     padding: 15px;
@@ -88,6 +97,12 @@
                     margin-top: 22px;
                     padding-left: 20px;
 
+                    @media (max-width:768px) {
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                    }
+
                     li {
                         list-style: inside;
 
@@ -109,9 +124,11 @@
 
     &_left {
         width: 525px;
+
         @media (max-width:992px) {
             width: 50%;
         }
+
         @media (max-width:650px) {
             width: 100%;
         }
@@ -124,6 +141,10 @@
             height: 356px;
             overflow-y: auto;
             margin-top: 65px;
+
+            @media (max-width:768px) {
+                margin-top: 40px;
+            }
 
             @media (max-width:650px) {
                 height: auto;
@@ -269,8 +290,9 @@
         }
     }
 
-    .quation_btns{
+    .quation_btns {
         display: none;
+
         @media (max-width:650px) {
             width: 100%;
             justify-content: center;
@@ -278,20 +300,24 @@
             display: flex;
             gap: 15px;
         }
-        .quation_btn{
+
+        .quation_btn {
             width: 48px;
             height: 48px;
             border-radius: 50%;
             cursor: pointer;
             border: 1px solid #fff;
             transition: all .2s linear;
-            &:hover{
+
+            &:hover {
                 background: #fff;
-                path{
-                    stroke:#131B23;
+
+                path {
+                    stroke: #131B23;
                 }
             }
-            &.next{
+
+            &.next {
                 transform: rotate(180deg);
             }
         }
