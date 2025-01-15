@@ -1421,6 +1421,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: block;
+  height: 24px;
 }
 .calculate .calculate_content .form_inputs .orders .orders_sum {
   color: #131B23;
@@ -1429,9 +1431,10 @@
   font-weight: 500;
   line-height: normal;
   background-color: #007BFB;
-  padding: 3px 24px 5px 9px;
-  min-height: 23px;
+  padding: 4px 24px 3px 9px;
+  min-height: 24px;
   position: relative;
+  border-radius: 0 2px 2px 0;
 }
 .calculate .calculate_content .form_inputs .orders .orders_sum::before {
   content: "";
@@ -1445,7 +1448,8 @@
   bottom: 0;
   margin: auto 0;
   background-color: #fff;
-  right: 10px;
+  right: 1px;
+  z-index: 3;
 }
 .calculate .calculate_content .form_inputs .orders .orders_sum::after {
   content: "";
@@ -1456,7 +1460,7 @@
   display: block;
   top: 4px;
   z-index: 2;
-  right: -8.6px;
+  right: -8.3px;
   transform: rotate(45deg);
 }
 .calculate .calculate_content .form_inputs .inputs {
@@ -1532,6 +1536,15 @@
   margin-top: 24px;
   gap: 12px;
   cursor: pointer;
+}
+@media (max-width: 556px) {
+  .calculate .calculate_content .form_inputs .form_input_btn label {
+    gap: 9px;
+  }
+}
+.calculate .calculate_content .form_inputs .form_input_btn label input {
+  transform: scale(1.46);
+  margin-top: 2px;
 }
 @media (max-width: 768px) {
   .calculate .calculate_content .form_inputs .form_input_btn label span {
