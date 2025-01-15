@@ -2969,7 +2969,8 @@
   }
 }
 .clean_wrapper .maps .card_form {
-  background: #02101C;
+  height: 100%;
+  background: rgba(2, 16, 28, 0.7215686275);
   padding: 54px 55px 66px;
   position: absolute;
   top: 0;
