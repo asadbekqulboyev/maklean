@@ -29,6 +29,7 @@
         @media (max-width:768px) {
             margin-top: 40px;
         }
+
         .reviews_item{
             padding: 46px 59px;
             height: 507px;
@@ -81,6 +82,19 @@
                 height: 12px;
             }
         }
-    }}
+    }
+    .logo_review{
+        height: 69px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        img{
+            height: auto;
+            width: auto;
+            object-fit: contain;
+        }
+        }
+}
 }
     

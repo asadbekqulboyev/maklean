@@ -1637,6 +1637,18 @@
     height: 12px;
   }
 }
+.reviews_content .logo_review {
+  height: 69px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.reviews_content .logo_review img {
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
 
 .articles {
   padding: 150px 0 130px;
