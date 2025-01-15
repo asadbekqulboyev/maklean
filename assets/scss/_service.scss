@@ -64,6 +64,7 @@
             }
 
             .quiz_top {
+                width: 100%;
                 @media (max-width:768px) {
                     justify-content: center;
                 }
@@ -79,12 +80,12 @@
                 font-weight: 500;
                 line-height: 107.4%;
                 letter-spacing: -0.45px;
-                margin-top: 22px;
+                margin-top: 44px;
                 margin-bottom: 22px;
                 width: 100%;
                 @media (max-width:768px) {
                     text-align: center;
-                    margin-top: 14px;
+                    margin-top: 6px;
                     font-size: 18px;
                     margin-bottom: 18px;
                 }
@@ -92,10 +93,7 @@
 
 
             .form_items {
-                margin-top: 30px;
-                @media (max-width:768px) {
-                    margin-top: 0;
-                }
+                margin-top: 0px;
             }
         }
     }

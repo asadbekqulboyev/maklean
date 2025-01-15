@@ -2556,6 +2556,9 @@
     font-size: 24px;
   }
 }
+.service_wrapper .calculate .container .quiz_top {
+  width: 100%;
+}
 @media (max-width: 768px) {
   .service_wrapper .calculate .container .quiz_top {
     justify-content: center;
@@ -2571,25 +2574,20 @@
   font-weight: 500;
   line-height: 107.4%;
   letter-spacing: -0.45px;
-  margin-top: 22px;
+  margin-top: 44px;
   margin-bottom: 22px;
   width: 100%;
 }
 @media (max-width: 768px) {
   .service_wrapper .calculate .container .quiz_title {
     text-align: center;
-    margin-top: 14px;
+    margin-top: 6px;
     font-size: 18px;
     margin-bottom: 18px;
   }
 }
 .service_wrapper .calculate .container .form_items {
-  margin-top: 30px;
-}
-@media (max-width: 768px) {
-  .service_wrapper .calculate .container .form_items {
-    margin-top: 0;
-  }
+  margin-top: 0px;
 }
 .service_wrapper .service {
   padding-top: 363px;
