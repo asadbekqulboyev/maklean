@@ -430,31 +430,91 @@
     gap: 30px 38px;
   }
 }
-@media (max-width: 495px) {
+@media (max-width: 556px) {
   .partners_company {
-    gap: 30px 55px;
+    gap: 30px 0;
+    padding-top: 0;
   }
 }
-@media (max-width: 419px) {
+@media (max-width: 330px) {
   .partners_company {
-    gap: 26px 35px;
+    gap: 30px 5px;
   }
 }
-@media (max-width: 379px) {
-  .partners_company {
-    gap: 26px 18px;
+@media (max-width: 556px) {
+  .partners_company li {
+    width: calc(33.33% - 25px);
   }
 }
-@media (max-width: 350px) {
-  .partners_company {
-    gap: 26px 9px;
+@media (max-width: 556px) {
+  .partners_company li {
+    width: calc(33.33% - 15px);
   }
 }
-@media (max-width: 495px) {
-  .partners_company img {
-    object-fit: contain;
-    height: 15px;
+@media (max-width: 556px) {
+  .partners_company li img {
+    height: 18px;
   }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(1) {
+    order: 2;
+    text-align: center;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(2) {
+    order: 5;
+    text-align: center;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(2) img {
+    height: 8px;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(3) {
+    order: 4;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(3) img {
+    height: 12px;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(4) {
+    order: 3;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(4) img {
+    height: 17px;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(5) {
+    order: 1;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(5) img {
+    height: 12px;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(6) {
+    order: 6;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company li:nth-child(6) img {
+    height: 10px;
+  }
+}
+.partners_company img {
+  object-fit: contain;
 }
 .partners_company::after {
   content: "";
@@ -470,6 +530,12 @@
 @media (max-width: 1159px) {
   .partners_company::after {
     margin-top: 15%;
+  }
+}
+@media (max-width: 556px) {
+  .partners_company::after {
+    margin: auto 0;
+    width: 100%;
   }
 }
 .partners_items {
