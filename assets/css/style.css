@@ -575,7 +575,7 @@
   }
 }
 .partners_item .partners_bg {
-  background: rgba(255, 255, 255, 0.7294117647);
+  background: rgba(255, 255, 255, 0.8941176471);
   position: absolute;
   top: 0;
   height: 99%;
@@ -590,6 +590,7 @@
 @media (max-width: 556px) {
   .partners_item .partners_bg {
     height: 165px;
+    justify-content: space-between;
   }
 }
 .partners_item .partners_info {
@@ -601,6 +602,13 @@
   .partners_item .partners_info {
     font-size: 24px;
     padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .partners_item .partners_info {
+    padding: 20px 10px 10px;
+    justify-content: space-between;
+    color: #4E545A;
   }
 }
 .partners_item .partners_info .partners_title {

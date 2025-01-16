@@ -68,7 +68,9 @@ $(document).ready(function () {
     $(this).toggleClass('active')
    })
   // hover partners
+  if (innerWidth>768) {
   $('.partners_item').hover(
+    // if(innerWidth<)
     function () {
       // Hozirgi elementga active klassini qo'shish
       $('.partners_item').removeClass('active');
@@ -76,6 +78,7 @@ $(document).ready(function () {
       
     }
   );
+  }
   // tabs
   let maxHeight = 0;
 
