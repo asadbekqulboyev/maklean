@@ -167,6 +167,8 @@
         cursor: pointer;
         @media (max-width:768px) {
             width: 50%;
+            color: #4E545A;
+
         }
         img {
             width: 100%;
@@ -191,8 +193,12 @@
                 height: 270px;
               }
               @media (max-width:556px) {
+                
                 height: 165px;
                 justify-content: space-between;
+                img{
+                    height: 165px;
+                }
             }
         }
 
@@ -207,7 +213,6 @@
             @media (max-width:768px) {
                 padding: 20px 10px 10px;
                 justify-content: space-between;
-                color: #4E545A;
             }             
             .partners_title {
                 color: inherit;

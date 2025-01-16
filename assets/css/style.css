@@ -557,6 +557,7 @@
 @media (max-width: 768px) {
   .partners_item {
     width: 50%;
+    color: #4E545A;
   }
 }
 .partners_item img {
@@ -592,6 +593,9 @@
     height: 165px;
     justify-content: space-between;
   }
+  .partners_item .partners_bg img {
+    height: 165px;
+  }
 }
 .partners_item .partners_info {
   padding: 30px;
@@ -608,7 +612,6 @@
   .partners_item .partners_info {
     padding: 20px 10px 10px;
     justify-content: space-between;
-    color: #4E545A;
   }
 }
 .partners_item .partners_info .partners_title {
