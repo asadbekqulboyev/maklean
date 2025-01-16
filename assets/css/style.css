@@ -759,7 +759,7 @@
 }
 @media (max-width: 768px) {
   .works_items li {
-    width: calc(50% - 8px);
+    width: calc(50% - 12px);
   }
 }
 .works_items li:last-child {
@@ -817,7 +817,7 @@
 }
 @media (max-width: 768px) {
   .works_items li a span {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 @media (max-width: 992px) {
@@ -827,7 +827,7 @@
 }
 @media (max-width: 768px) {
   .works_items li a svg {
-    width: 15px;
+    width: 16px;
   }
 }
 .works_items li a path {
