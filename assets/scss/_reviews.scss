@@ -46,6 +46,7 @@
                 box-shadow: 0 0 0;
               }
         .reviews_logo{
+            max-width: 100%;
             &:nth-child(1){
                 @media (max-width:556px) {
                     height: 30px;
@@ -65,16 +66,12 @@
         .swiper-slide:nth-child(2){
             .reviews_logo:nth-child(1){
                 @media (max-width:556px) {
-                height: 20px;
+                // height: 20px;
+                object-fit: contain;
             }
         }}
 
-        .swiper-slide:nth-child(4){
-            .reviews_logo:nth-child(1){
-                @media (max-width:556px) {
-                height: 12px;
-            }
-        }
+        
         }
         .swiper-slide:last-child{
             .reviews_logo:nth-child(1){
@@ -96,5 +93,5 @@
         }
         }
 }
-}
+
     
