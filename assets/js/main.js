@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
   // slide products
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.products .swiper-container', {
     slidesPerView: 4,
     spaceBetween: 100,
     loop:true,
@@ -11,11 +11,12 @@ $(document).ready(function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1.2,
-        
+        slidesPerView: 1.3,
+        spaceBetween: 35,
       },
       556: {
         slidesPerView: 2.4,
+        spaceBetween: 75,
         
       },
       768: {
