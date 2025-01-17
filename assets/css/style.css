@@ -3068,9 +3068,9 @@
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .clean_wrapper .maps {
-    margin-top: 130px;
+    margin-top: 129px;
   }
 }
 .clean_wrapper .maps .card_form {
@@ -3084,6 +3084,7 @@
 @media (max-width: 556px) {
   .clean_wrapper .maps .card_form {
     width: calc(100% - 30px);
+    height: auto;
     padding: 24px 25px 26px;
   }
 }

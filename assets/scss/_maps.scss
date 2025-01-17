@@ -3,9 +3,10 @@
         margin-top: 160px;
         position: relative;
         overflow: hidden;
-        @media (max-width:768px) {
-            margin-top: 130px;
+        @media (max-width:992px) {
+            margin-top: 129px;
         }
+        
         .card_form {
             height:100%;
             background: #02101cb8;
@@ -15,6 +16,7 @@
             width: 510px;
             @media (max-width:556px) {
                 width:calc(100% - 30px);
+                height: auto;
                 padding: 24px 25px 26px;
             }
             .section_title {
