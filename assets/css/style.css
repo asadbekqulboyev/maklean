@@ -1818,7 +1818,6 @@
 @media (max-width: 768px) {
   .articles_item {
     width: 100%;
-    min-height: auto;
   }
 }
 .articles_item .articles_top .articles_number {
