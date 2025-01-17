@@ -985,6 +985,11 @@
 .workflow_item .workflow_description .social span {
   padding-left: 13px;
 }
+@media (max-width: 556px) {
+  .workflow_item .workflow_description .social span {
+    font-size: 10px;
+  }
+}
 .workflow_item .workflow_description .social ul {
   padding-left: 13px;
   align-items: center;
@@ -3041,19 +3046,19 @@
   background: #313940;
 }
 
-.clean_main .hero_info {
+.clean_wrapper .hero_info {
   padding-top: 146px;
 }
-.clean_main .works {
+.clean_wrapper .works {
   padding-top: 278px;
 }
 @media (max-width: 992px) {
-  .clean_main .works {
+  .clean_wrapper .works {
     padding-top: 178px;
   }
 }
 @media (max-width: 992px) {
-  .clean_main .works {
+  .clean_wrapper .works {
     padding-top: 158px;
     padding-bottom: 0;
   }

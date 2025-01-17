@@ -246,6 +246,9 @@
                 align-items: center;
                 span{
                     padding-left: 13px;
+                    @media (max-width:556px) {
+                        font-size: 10px;
+                    }
                 }
                 ul{
                     padding-left: 13px;

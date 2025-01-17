@@ -95,9 +95,9 @@ $(document).ready(function () {
   $(".quation_request").height(maxHeight);
   if(innerWidth<650){
     $('.quation_item.quation_mobile').click(function(){
-      $(".request_mobile").slideUp(10)
+      $(".request_mobile").slideUp(500)
       $('.quation_item.quation_mobile').removeClass('active')
-      $(this).next(".quation_request.request_mobile").slideDown()
+      $(this).next(".quation_request.request_mobile").slideDown(400)
       $(this).addClass('active')
     })
     // 
